@@ -1,6 +1,8 @@
 connections are often kept alive for push mechanisms like server sent events(sse)and web sockets to enable Realtime two communication.
 
-push Mechanism: first the client requests to the server then token may be received by the client for the push notification communication and after that the connection is keept alive.
+push Mechanism: first the client requests to the server, then token(authentication key) may be received by the client after the client accepts the permission for the push messages for the push notification communication and after that the connection is keept alive.
+In the event of the client offline and the keep alive time is passed, it is the client when comes online will connect to the server based on the authentication key received and again keep the connection alive until client goes offline. 
+
 which enables the server to push notifications/messages to the client when an event occurs on the server. This is the most common method for "push notifications" in laptop or mobiles.
 The keep-alive time for push notifications refers to the interval at which TCP connections are actively maintained to ensure they remain open, even during periods of inactivity. 
 This is crucial because mobile devices often terminate TCP connections when they enter sleep mode or are inactive. A common keep-alive time setting is around 5 minutes, but this can 
