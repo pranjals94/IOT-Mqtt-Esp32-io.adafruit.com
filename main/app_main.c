@@ -134,7 +134,7 @@ static void mqtt_app_start(void)
         .broker.address.uri = CONFIG_BROKER_URL,
         .credentials = {
             .username = "yourusername",
-            .authentication.password = "your_adafruit_generated_key", // get it in io.adafruit.com
+            .authentication.password = "your_adafruit_generated_key", // get it in io.adafruit.com , adafruit keeps this key refreshing after few days so needed to update it
         }};
 #if CONFIG_BROKER_URL_FROM_STDIN
     char line[128];
